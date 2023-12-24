@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
         </div>
         <div
-          className={`md:hidden fixed top-0 right-0 h-full bg-gradient-to-r w-[70%] from-slate-950 to-stone-400 transition-transform duration-700 z-10 transform ${
+          className={`md:hidden fixed top-0 right-0 h-full bg-gradient-to-r w-[70%] from-white to-slate-200 transition-transform duration-700 z-10 transform ${
             showMenu ? "translate-x-0" : "translate-x-full"
           }`}
         >
