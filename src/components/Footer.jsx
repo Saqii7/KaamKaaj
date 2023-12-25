@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-100 text-gray-800 py-8 w-full">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-start justify-around">
         {/* Left Section: Kaam Kaaj Title and Description */}
-        <div className="mb-6 md:mb-0 px-4">
+        <div className="mb-6 md:mb-0">
           <h2 className="text-3xl font-bold mb-2">Kaam <span className='text-cyan-500'>Kaaj</span></h2>
           <p className="text-sm">Providing top-notch services since 2023</p>
         </div>
