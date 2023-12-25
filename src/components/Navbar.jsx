@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import SButton from "./SButton";
-import PButton from "./PButton";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -16,20 +14,37 @@ const Navbar = () => {
       <nav className="container">
         <div className="flex justify-around px-7 items-center">
           <div>
-            <h1 className="text-xl md:text-3xl font-bold text-slate-950"> <Link to="/">Kaam <span className="text-cyan-500 font-extrabold"> Kaaj </span></Link>
-              
+            <h1 className="text-xl md:text-3xl font-bold text-slate-950">
+              {" "}
+              <Link to="/">
+                Kaam{" "}
+                <span className="text-cyan-500 font-extrabold"> Kaaj </span>
+              </Link>
             </h1>
           </div>
           <div className="hidden md:flex gap-2 items-center justify-between">
             <ul className="flex font-semibold gap-4 text-base">
-              <li> <Link to="/">Home</Link></li>
-              <li><Link to="/services">Services</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li>Contact</li>
+              <li>
+                {" "}
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/services">Services</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
             </ul>
             <div className="flex flex-wrap gap-2 ml-8">
-              <PButton text="Log in" />
-              <SButton text="Sign-up" />
+              <Link
+                to="/auth"
+                className="border-white bg-gradient-to-r from-emerald-800 to-teal-300 font-semibold text-white hover:bg-gradient-to-r hover:from-teal-300 hover:to-emerald-700 px-6 py-2 rounded-lg sm:text-sm w-full md:w-auto duration-300"
+              >
+                Sign up
+              </Link>
             </div>
           </div>
           <div className="flex md:hidden">
@@ -48,20 +63,31 @@ const Navbar = () => {
           <div className="flex justify-end px-5 py-3">
             <AiOutlineClose
               size={30}
-              className="text-white"
+              className="text-gray-900"
               onClick={toggleMenu}
             />
           </div>
           <ul className="flex flex-col items-center font-semibold gap-8 text-base py-8">
-            <li>Home</li>
-            <li>Services</li>
-            <li>About</li>
-            <li>Contact </li>
+            <li>
+              {" "}
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact Us</Link>
+            </li>
+            <Link
+              to="/auth"
+              className="border-white bg-gradient-to-r from-emerald-800 to-teal-300 font-semibold text-white hover:bg-gradient-to-r hover:from-teal-300 hover:to-emerald-700 px-6 py-2 rounded-lg sm:text-sm md:w-auto duration-300"
+            >
+              Sign up
+            </Link>
           </ul>
-          <div className="flex gap-2 flex-wrap justify-center">
-            <PButton text="Log-in" />
-            <SButton text="Sign-up" />
-          </div>
         </div>
       </nav>
     </div>

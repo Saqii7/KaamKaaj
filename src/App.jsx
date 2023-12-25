@@ -5,6 +5,8 @@ import VendorPage from "./pages/VendorPages";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
+import ContactPage from "./pages/ContactPage";
+// import AuthPage from "./pages/AuthPage";
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<VendorPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<About />} />
+        {/* <Route path="/auth" element={<AuthP />} /> */}
       </Routes>
       <Footer/>
       </BrowserRouter>

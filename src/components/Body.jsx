@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactForm from './ContactForm';
+import Contact from './Contact';
 import Lottie from 'lottie-react';
 import Plumber from '../assets/svgs/plumber.json';
 import Electrician from '../assets/svgs/electrician.json';
@@ -71,7 +71,7 @@ const Body = () => {
           schedule an appointment.
         </p>
         <div className="mt-8">
-          <ContactForm />
+          <Contact/>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PButton from './PButton';
+import ContactContent from '../components/ContactContent';
 
-const ContactForm = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,7 +29,16 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="p-4 rounded-lg border-[1px] border-gray-400 w-full max-w-lg mx-auto mt-8" onSubmit={handleSubmit}>
+    <div className='pt-32 px-4'>
+    <ContactContent/>
+    <div className="text-center mb-8 px-4">
+      <h2 className=" text-2xl font-bold mb-5">Contact Form</h2>
+        <p>
+          If you prefer, you can also reach out to us by filling out the form below. We'll get back to you as soon as possible.
+        </p>
+        {/* Include your contact form component here */}
+      </div>
+    <form className="px-4 shadow-lg p-4 rounded-lg border-[1px] border-gray-400 w-full max-w-lg mx-auto mb-8 " onSubmit={handleSubmit}>
       <div className="mb-4">
         <label htmlFor="name" className="block mb-2 font-medium text-gray-700">
           Name
@@ -75,11 +84,15 @@ const ContactForm = () => {
           required
         ></textarea>
       </div>
-      <div className="text-center scale-125">
-        <PButton text="Submit" />
+      <div className="text-center">
+      <button 
+    className="bg-gradient-to-r from-emerald-800 to-teal-300 font-semibold text-white px-6 py-2 rounded-lg sm:text-sm">
+      Submit
+    </button>
       </div>
     </form>
+    </div>
   );
 };
 
-export default ContactForm;
+export default ContactPage;
