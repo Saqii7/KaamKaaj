@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 
 const Hero = () => {
   return (
-    <div className="h-auto md:h-screen flex flex-col md:flex-row justify-between items-center p-4 text-black pt-16 md:pt-0">
+    <div className="h-auto md:h-screen flex flex-col md:flex-row justify-between items-center container p-4 text-black pt-16 md:pt-0">
       <div className="w-full md:w-1/2 md:pb-0 mb-8 md:mb-0">
         <h1 className="text-3xl md:text-5xl p-3 font-bold leading-tight">
           Kaam

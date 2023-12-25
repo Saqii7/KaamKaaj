@@ -8,7 +8,7 @@ import Maintainance from '../assets/svgs/maintainance.json';
 
 const Body = () => {
   return (
-    <div className="px-4 py-8 text-justify">
+    <div className="px-4 py-8 text-justify container">
       <h2 className="text-3xl font-bold mb-8 px-4">Our Services</h2>
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 p-4">
         {/* Plumbing Services */}

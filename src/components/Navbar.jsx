@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import SButton from "./SButton";
 import PButton from "./PButton";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,18 +13,18 @@ const Navbar = () => {
 
   return (
     <div className="z-10 fixed w-full p-3 bg-gradient-to-r from-white to-slate-200 text-black">
-      <nav>
+      <nav className="container">
         <div className="flex justify-around px-7 items-center">
           <div>
-            <h1 className="text-xl md:text-3xl font-bold text-slate-950">
-              Kaam <span className="text-cyan-500 font-extrabold"> Kaaj </span>{" "}
+            <h1 className="text-xl md:text-3xl font-bold text-slate-950"> <Link to="/">Kaam <span className="text-cyan-500 font-extrabold"> Kaaj </span></Link>
+              
             </h1>
           </div>
           <div className="hidden md:flex gap-2 items-center justify-between">
             <ul className="flex font-semibold gap-4 text-base">
-              <li>Home</li>
-              <li>Services</li>
-              <li>About</li>
+              <li> <Link to="/">Home</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/about">About</Link></li>
               <li>Contact</li>
             </ul>
             <div className="flex flex-wrap gap-2 ml-8">
